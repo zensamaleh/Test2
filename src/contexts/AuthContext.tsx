@@ -10,6 +10,7 @@ interface AuthContextType {
   error: string | null
   signUp: (email: string, password: string, fullName?: string) => Promise<{ data: any; error: string | null }>
   signIn: (email: string, password: string) => Promise<{ data: any; error: string | null }>
+  signInWithGoogle: () => Promise<{ data: any; error: string | null }>;
   signOut: () => Promise<void>
   updateProfile: (updates: Partial<User>) => Promise<void>
 }
